@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevRegistry — Next.js Core Dashboard Platform
 
-## Getting Started
+A high-performance project management dashboard built with Next.js 15, TypeScript, and Tailwind CSS. This repository serves as a showcase of modern server-first architecture patterns, automated multi-branch CI/CD verification workflows, and resilient data-fetching infrastructures.
 
-First, run the development server:
+## 🔗 Live Deployments
 
+- **Production Live Demo:** [https://vercel.app](https://vercel.app)
+- **Host Provider:** Vercel Edge Network (Continuous Deployment Pipeline)
+
+## 🛠️ Technology & Architecture Stack
+
+- **Framework:** Next.js 15 (App Router Architecture)
+- **Language Layer:** TypeScript (Rigid structural interface parsing)
+- **Styling Utility:** Tailwind CSS (Fluid responsive utility grids)
+- **CI/CD Pipeline:** GitHub Actions (Automated linting and build verification checks)
+- **Component Model:** Async React Server Components (Zero-client data bundling)
+
+## ⚡ Key Architectural Features
+
+- **File-System Base Routing:** Uses Next.js nested folder trees to automate path resolutions cleanly.
+- **Persistent Structural Layouts:** Implements global persistent layouts to prevent view layout shifts on user transitions.
+- **Resilient Server Data Processing:** Leverages native server-side fetch caches containing fault-tolerant fallback vectors to handle upstream server limitations gracefully.
+- **Enterprise Git Flow:** Engineered following strict `main` ◄ `develop` ◄ `feature/*` software delivery branching strategies.
+
+## ⚙️ Automated Pipeline Setup
+
+This project uses an automated GitHub Actions pipeline to run verification tasks on every code push or pull request to the central branches:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1. Installs project dependencies via frozen lockfiles
+npm ci
+# 2. Runs rigid project script linting
+npm run lint
+# 3. Compiles production build matrix to perform type-checking validation
+npm run build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

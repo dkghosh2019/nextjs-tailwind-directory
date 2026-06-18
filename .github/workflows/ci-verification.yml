@@ -1,0 +1,30 @@
+name: Continuous Integration Code Verification
+
+on:
+  push:
+    branches: [ develop, main ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  verify-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Project Dependencies
+        run: npm ci
+
+      - name: Validate Code via ESLint Linter
+        run: npm run lint
+
+      - name: Execute Production Compilation (Type-Checking Check)
+        run: npm run build
